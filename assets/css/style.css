@@ -498,6 +498,17 @@ ul {
   z-index:5;
 }
 
+#hero.lazy-background {
+  width: 100%;
+  /* margin-top:110px; */
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(0deg, #cc6699 0%, #df9fbf 100%);
+  background-size: cover;
+  padding: 0;
+  z-index:5;
+}
+
 #hero .carousel-container {
   display: flex;
   justify-content: left;
@@ -620,6 +631,13 @@ ul {
   animation-delay: -2s;
 }
 
+.wave4 use {
+  -webkit-animation: move-forever4 4s linear infinite;
+  animation: move-forever4 4s linear infinite;
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s;
+}
+
 @-webkit-keyframes move-forever1 {
   0% {
     transform: translate(85px, 0%);
@@ -671,6 +689,24 @@ ul {
   }
   100% {
     transform: translate(85px, 0%);
+  }
+}
+
+@-webkit-keyframes move-forever4 {
+  0% {
+    transform: translate(-80px, 0%);
+  }
+  100% {
+    transform: translate(95px, 0%);
+  }
+}
+
+@keyframes move-forever4 {
+  0% {
+    transform: translate(-80px, 0%);
+  }
+  100% {
+    transform: translate(95px, 0%);
   }
 }
 /*--------------------------------------------------------------
@@ -828,98 +864,27 @@ section {
   color: #2a2c39;
 }
 
-/*-------------------------------------------------------------
-# test Section
---------------------------------------------------------------*/
-.test {
- position:relative;
- top:-100px;
- background: url("../img/about.jpg") fixed center center;
- background-size:cover;
- height:400px;
- box-sizing: border-box;
- overflow: hidden;
-}
-
- .tester {
-	 position: relative;
-	 overflow: hidden;
-}
- .tester:after {
-	 content: " ";
-	 position: absolute;
-	 width: 100%;
-	 height: 100%;
-	 top: 0;
-	 left: 0;
-}
- .tester:after {
-	 background-image: url('http://files.rb.gd/atlanticimpact/ripped-paper-s.png');
-	 background-position: bottom center;
-	 background-repeat: repeat-x;
-	 background-size: 580px 19px;
-}
- .tester #title {
-	 background: #FFC20E;
-	 width: 43.75%;
-	 padding: 75px 112px 75px 75px;
-	 color: #3D3C3E;
-	 position: relative;
-}
-.tester #title:after {
-	 content: " ";
-	 position: absolute;
-	 width: 100%;
-	 height: 100%;
-	 top: 0;
-	 left: 0;
-}
-.tester #title:after {
-	 background-image: url('http://files.rb.gd/atlanticimpact/ripped-paper-e.png');
-	 background-position: center right;
-	 background-repeat: repeat-y;
-	 background-size: 19px 580px;
-}
-.tester #title h2 {
-	 font-family: "Queulat";
-	 font-size: 49px;
-	 font-weight: 900;
-	 margin-bottom: 20px;
-}
-.tester #title h4 {
-	 font-family: "Arquitecta";
-	 font-weight: 900;
-	 font-size: 21px;
-	 letter-spacing: 6px;
-	 text-transform: uppercase;
-	 margin-bottom: 35px;
-}
-.tester #title p {
-	 font-family: "Arquitecta";
-	 font-weight: 400;
-	 font-size: 32px;
-	 line-height: 1.2;
-	 position: relative;
-	 padding-top: 35px;
-}
-.tester #title p:before {
-	 content: ' ';
-	 top: -5px;
-	 left: 0;
-	 width: 275px;
-	 height: 3px;
-	 background-color: white;
-	 position: absolute;
-}
-
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+.about-wave {
+  display: block;
+  width: 100%;
+  height: 60px;
+  position: relative;
+  transform: scaleY(-1);
+  position: relative;
+  top: 40px;
+  z-index: 5;
+  
+}
 .about {
- padding: 0;
+ padding: 30px 0 0 0;
  box-sizing: border-box;
  overflow: hidden;
+ position: relative;
 }
+
 .about-col-1{
   box-sizing: border-box;
   padding:0 !important;
@@ -927,11 +892,11 @@ section {
    z-index: 0;
   /* background: url("../img/about-bg.jpg")  center center; */
   /* background-repeat:round; */
-  background-color: #fff;
+  background-color: #f9ecf4;
   color: #444444; /*#c03d8d;*/
 }
 
-.about-col-1 p:before{
+.about-col-1 .description:before{
   content:"";
   z-index: -1;
   background:url("../img/logo.svg") no-repeat;
@@ -939,13 +904,8 @@ section {
   height:60%;
   position:absolute;
   left:-150px;
-  bottom:0;
+  /* bottom:0; */
   filter: invert(82%) sepia(12%) saturate(1583%) hue-rotate(285deg) brightness(104%) contrast(96%);
-}
-
- .about-col-1 video{
-   width:480px;
-   height:275px;
 }
 
 .about-col-2 {
@@ -954,9 +914,10 @@ section {
 	margin:0 !important;
 }
 .about-headings{
-	padding-left:120px; 
-	padding-top:30px; 
-	padding-right:30px;
+	margin-left:150px; 
+	margin-top: 50px; 
+	margin-right:0px;
+	/* background-color: #f9ecf4; */
 }
 .about h3 {
   font-weight: 600;
@@ -971,6 +932,7 @@ section {
 
 @media only screen and (max-width: 700px) {
   .about-headings{
+	margin:0 !important;
 	padding: 40px; 
 	align-items: center;
   }
@@ -988,6 +950,7 @@ section {
 }
 @media only screen and (max-width: 500px) {
   .about-headings{
+	margin:0 !important;
 	padding: 20px; 
 	width:100vw;
   }
@@ -999,10 +962,24 @@ section {
 .about .card {
   border: 0;
   border-radius:0;
-  padding: 10px 20px 50px 20px;
+  padding: 10px 10px 50px;/*100px 20px; /*25px 25px 70px 25px;*/
   position: relative;
   width: 100%;
+  height:100%;
   background-image: url("assets/img/about.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.about .card.lazy-background {
+  border: 0;
+  border-radius:0;
+  padding: 10px 10px 50px;  /*100px 20px; /*25px 25px 70px 25px;*/
+  position: relative;
+  width: 100%;
+  height:100%;
+  background-image: url("");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -1011,7 +988,7 @@ section {
 .about .card-body {
   z-index: 10;
   background: rgba(255, 255, 255, 0.75);
-  padding: 10px 20px;
+  /* padding: 10px 10px; */
   margin: 10px 0;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
   transition: 0.3s;
@@ -1061,7 +1038,17 @@ section {
   background: url("../img/about-vid.jpg") fixed center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 350px;
+  height: 300px;
+  width:100%;
+  overflow: hidden;
+}
+
+#video.lazy-background {
+  background: url("../img/about-vid.jpg") fixed center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  width:100%;
   overflow: hidden;
 }
 
@@ -1175,6 +1162,36 @@ section {
   }
 }
 
+.about-col-1 .btn-play-video {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  /* font-size: 14px; */
+  /* letter-spacing: 1px; */
+  text-align:center;
+  max-width:300px;
+  display: flex;
+  padding: 12px 82px;
+  border-radius: 50px;
+  transition: 0.5s;
+  line-height: 1;
+  margin: 10px;
+  color: #444444;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+  border: 2px solid #3498db;
+}
+
+.about-col-1 .btn-play-video:hover {
+  background: #3498db;
+  color: #fff;
+  text-decoration: none;
+}
+
+.about-col-1 .btn-play-video:active {
+  background: #ff0080;
+  color: #fff;
+  text-decoration: none;
+}
 
 /*--------------------------------------------------------------
 # What We Do
@@ -1399,7 +1416,25 @@ section {
     background-size: cover;
     overflow: hidden;
 }
+.modal table {
+  border-collapse: collapse;
+  width: 100%;
+  color:#444444;
+}
 
+.modal td, .modal th {
+  border: 1px solid #cce6ff;
+  text-align: left;
+  padding: 8px;
+}
+
+.modal tr:nth-child(even) {
+  background-color: #cce6ff;
+}
+
+.modal tr:nth-child(odd) {
+  background-color: #fff;
+}
 /*--------------------------------------------------------------
 # Why US
 --------------------------------------------------------------*/
@@ -1528,7 +1563,8 @@ section {
 	margin:0 !important;
 }
 #faq-title{
-   padding-top:270px;
+   padding-top: 170px;/*270px;*/
+   padding-left:70px;
 }
 
 .faq-col-2 .row {
@@ -1605,11 +1641,12 @@ section {
 .faq-col-2 .panel{
 	margin:10px;
 	padding: 20px;
-	border: 1px solid #d4e9e6;
+	border: 1px solid #cce6ff;
 	text-align:center;
 	display:flex;
 	justify-content:center;
 	align-items: center;
+	background: #cce6ff;
 }
 
 .poll-container {
@@ -1989,6 +2026,13 @@ div.client-logo img {
   padding: 60px 0;
 }
 
+.cta.lazy-background {
+  background: linear-gradient(rgba(53, 135, 151, 0.8), rgba(53, 135, 151, 0.9)) fixed center center;
+  background-size: cover;
+  padding: 60px 0;
+}
+
+
 .cta h3 {
   color: #fff;
   font-size: 28px;
@@ -2079,6 +2123,7 @@ div.client-logo img {
     width: 100%;
   }
 }
+
 
 /*--------------------------------------------------------------
 # Contact
@@ -2230,15 +2275,6 @@ div.client-logo img {
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-
-@media (max-width: 768px) {
-  .contact .contact-panel {
-    width: 100vw;
-  }
-  .contact .form-panel {
-    width: 100vw;
   }
 }
 
@@ -2597,6 +2633,7 @@ div.client-logo img {
     background: #3498db;
   }
 }
+
 /*--------------------------------------------------------------
 # School Login Form
 --------------------------------------------------------------*/
@@ -2612,6 +2649,20 @@ div.client-logo img {
     overflow-y: hidden;
 	/* margin-top:50px; */
 }
+
+.login-form.lazy-background{
+  font-family: 'Raleway', sans-serif;
+	height:85vh;
+	min-height:550px;
+	background: #444444;
+	background-repeat: no-repeat;
+	background-size:cover;
+	background-position:center;
+	position:relative;
+    overflow-y: hidden;
+	/* margin-top:50px; */
+}
+
 .login-form a{
   text-decoration:none;
   color:#444444;
@@ -2657,6 +2708,7 @@ div.client-logo img {
     font-weight: 600;
     font-size: 18px;
 }
+
 .login-info-box{
     width:30%;
     padding: 30px 50px;
@@ -2727,20 +2779,6 @@ div.client-logo img {
     border: 1px solid #b5b5b5;
     outline: none;
 }
-.register-show input[type="button"] {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-size: 13px;
-  letter-spacing: 2px;
-  display: inline-block;
-  padding: 12px 28px;
-  border-radius: 4px;
-  border-color: #3498db;
-  transition: ease-in-out 0.3s;
-  color: #fff;
-  background: #3498db;
-  text-transform: uppercase;
-}
 
 .register-show input[type="button"]:hover {
   background: #4ea5e0;
@@ -2780,6 +2818,149 @@ div.client-logo img {
   }
 }
 
+@keyframes click-wave {
+  0% {
+    height: 25px;
+    width: 25px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 100px;
+    width: 100px;
+    margin-left: -37px;
+    margin-top: -37px;
+    opacity: 0;
+  }
+}
+/*---------------Collaborate Form-----------------*/
+.collaborate-form .validate {
+  display: none;
+  color: red;
+  margin: 0 0 15px 0;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.collaborate-form .error-message {
+  display: none;
+  color: #fff;
+  background: #ed3c0d;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.collaborate-form  .error-message br + br {
+  margin-top: 25px;
+}
+
+.collaborate-form  .sent-message {
+  display: none;
+  color: #fff;
+  background: #18d26e;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.collaborate-form  .loading {
+  display: none;
+  background: #fff;
+  text-align: center;
+  padding: 15px;
+}
+
+.collaborate-form  .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #18d26e;
+  border-top-color: #eee;
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+
+.btn-collaborate {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 2px;
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 4px;
+  border-color: #3498db;
+  transition: ease-in-out 0.3s;
+  color: #fff;
+  background: #3498db;
+  text-transform: uppercase;
+}
+
+.collaboration-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  display:inline-block !important;
+  position: relative;
+  top: 3.33333px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  transition: all 0.15s ease-out 0s;
+  background: #cbd1d8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.25rem;
+  margin-left: 1rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+.collaboration-input:hover {
+  background: #9faab7;
+}
+.collaboration-input:checked {
+  background: #3498db;
+}
+.collaboration-input:checked::before {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  content: '✔';
+  display: inline-block;
+  font-size: 18.66667px;
+  text-align: center;
+  line-height: 25px;
+}
+.collaboration-input:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #3498db;
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+.collaboration-input.radio {
+  border-radius: 50%;
+}
+.collaboration-input.radio::after {
+  border-radius: 50%;
+}
+.collaboration-input label[title]:hover:after {
+   content: attr(title);
+   border: 1px solid red;
+}
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/

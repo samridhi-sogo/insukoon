@@ -24,7 +24,7 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/calendar/full-calendar.css" rel="stylesheet">
-  <link href="https://unpkg.com/css-pro-layout/dist/css/css-pro-layout.min.css" rel="stylesheet" />
+  <link href="https://cdn.rawgit.com/tonystar/bootstrap-float-label/v4.0.1/dist/bootstrap-float-label.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" />
 
   <!-- Main CSS File -->
@@ -135,40 +135,167 @@
 	</div>
     <div class="admin-profile">
       <span class="greeting"></span>
-      <div class="notifications">
-        <!-- <span class="badge">1</span> --> <!--Notification bubble-->
-        <a href=""><i class="icofont-sign-out icofont-2x"></i></a>
-      </div>
+      <!-- <div class="notifications"> -->
+        <!-- <!-- <span class="badge">1</span> --> <!--Notification bubble--> -->
+        <!-- <a href=""><i class="icofont-sign-out icofont-2x"></i></a> -->
+      <!-- </div> -->
+	  <button class="learn-more">
+       <span class="circle" aria-hidden="true">
+         <span class="icon arrow"></span>
+       </span>
+       <span class="button-text">Sign Out</span>
+     </button>
     </div>
   </section>
    
    <!-- ======= Profile Tab ======= -->
-<section id="profile" class="tabcontent">
-  <div class="grid">
-    <article></article>
-    <article></article>
-    <article></article>
-    <article></article>
+<section id="profile" class="profile tabcontent">
+	<!-- School Profile -->
+<div class="school-profile py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mt-4">
+        <div class="card shadow-sm">
+          <div class="card-header bg-transparent text-center">
+            <img class="profile_img" src="https://placeimg.com/640/480/arch/any" alt="">
+            <h3>School Name</h3>
+          </div>
+          <div class="card-body">
+            <p class="mb-0"><strong class="pr-1">School ID :</strong>&nbsp;&nbsp;321000001</p>
+            <p class="mb-0"><strong class="pr-1">Start Date:</strong>&nbsp;&nbsp;01-Jan-2021</p>
+            <p class="mb-0"><strong class="pr-1">End Date  :</strong>&nbsp;&nbsp;31-Dec-2025</p>
+			<br/><hr/>
+			<p class="mb-0 text-center"><a style="color:#3498db" href="javascript:showBillingInformation()">Billing Information</a></p>
+          </div>
+        </div>
+		<div id="billing" class="billing mt-4" style="display:none;">
+		    <form class="form-card">
+			<fieldset class="form-fieldset">
+				<legend class="form-legend">Billing Details</legend>
+			    <div class="form-element form-input">
+					<input id="field-billing-name" class="form-element-field" placeholder="Please fill in the full name" type="input" required/>
+					<div class="form-element-bar"></div>
+					<label class="form-element-label" for="field-billing-name">Billing To</label>
+					<small class="form-element-hint">Name that goes on Billing Information</small>
+				</div>	
+				<div class="form-element form-textarea">
+					<textarea id="field-billing-address" class="form-element-field" placeholder=" "></textarea>
+					<div class="form-element-bar"></div>
+					<label class="form-element-label" for="field-billing-address">Billing Address</label>
+				</div>
+				<div class="form-element form-input"> <!--form-has-error-->
+					<input id="field-billing-phone" class="form-element-field -hasvalue" placeholder=" " type="number" required  />
+					<div class="form-element-bar"></div>
+					<label class="form-element-label" for="field-billing-phone">Contact Number</label>
+					<small class="form-element-hint">Contact Number that goes on Billing Information</small>
+				</div>
+				<div class="form-element form-input"> <!--form-has-error-->
+					<input id="field-gst-number" class="form-control" type="text" placeholder="XXXX-XXXX-XXXX" readonly>
+					<div class="form-element-bar"></div>
+					<label class="form-element-label" for="field-gst-number"></label>
+					<small class="form-element-hint">To change the GST Number, drop a mail on crm@insukoon.com</small>
+				</div>
+			</fieldset>
+		    </form>
+		</div>
+      </div>
+      <div class="col-lg-8 mt-4">
+            <form class="form-card">
+			<fieldset class="form-fieldset">
+				<legend class="form-legend">Profile Details</legend>
+				<div class="form-element form-textarea">
+					<textarea id="field-school-address" class="form-element-field" placeholder=" "></textarea>
+					<div class="form-element-bar"></div>
+					<label class="form-element-label" for="field-school-address">School Address</label>
+				</div>
+				<div class="form-element form-input">
+					<input id="field-school-email" class="form-element-field" placeholder=" " type="email" required/>
+					<div class="form-element-bar"></div>
+					<label class="form-element-label" for="field-school-email">Email</label>
+					<small class="form-element-hint">For all official communications...</small>
+				</div>
+				<div class="form-element form-input">
+					<input id="field-school-number" class="form-element-field" placeholder="Please fill in School Phone Number" type="input" required/>
+					<div class="form-element-bar"></div>
+					<label class="form-element-label" for="field-school-number">Phone Number</label>
+				</div>
+				<div class="form-checkbox form-checkbox-inline">
+					<div class="form-checkbox-legend">Affiliation:</div>
+					<label class="form-checkbox-label">
+						<input name=cbse class="form-checkbox-field" type="checkbox" />
+						<i class="form-checkbox-button"></i>
+						<span>CBSE</span>
+					</label>
+					<label class="form-checkbox-label">
+						<input name=icse class="form-checkbox-field" type="checkbox" />
+						<i class="form-checkbox-button"></i>
+						<span>ICSE</span>
+					</label>
+					<label class="form-checkbox-label">
+						<input name=state class="form-checkbox-field" type="checkbox" />
+						<i class="form-checkbox-button"></i>
+						<span>State</span>
+					</label>
+					<label class="form-checkbox-label">
+						<input name=xyz class="form-checkbox-field" type="checkbox" />
+						<i class="form-checkbox-button"></i>
+						<span>XYZ</span>
+					</label>
+					<label class="form-checkbox-label">
+						<input name=others class="form-checkbox-field" type="checkbox" />
+						<i class="form-checkbox-button"></i>
+						<span>Others</span>
+					</label>
+				</div>
+				<div class="form-element form-input">
+					<input id="field-director-name" class="form-element-field" placeholder="Please fill in the full name" type="input" required/>
+					<div class="form-element-bar"></div>
+					<label class="form-element-label" for="field-director-name">Director's Name</label>
+				</div>
+				<div class="form-element form-input">
+					<input id="field-principal-name" class="form-element-field" placeholder="Please fill in the full name" type="input" required/>
+					<div class="form-element-bar"></div>
+					<label class="form-element-label" for="field-principal-name">Principal's Name</label>
+				</div>
+				<div class="form-element form-input">
+					<input id="field-poc-name" class="form-element-field" placeholder="Please fill in the full name" type="input" required/>
+					<div class="form-element-bar"></div>
+					<label class="form-element-label" for="field-poc-name">Spokeperson's Name</label>
+					<small class="form-element-hint">This is the person of contact, in case of emergency.</small>
+				</div>
+				<div class="form-element form-input"> <!--form-has-error-->
+					<input id="field-poc-number" class="form-element-field -hasvalue" placeholder=" " type="number" required value="9999999999" />
+					<div class="form-element-bar"></div>
+					<label class="form-element-label" for="field-poc-number">POC Phone Number</label>
+					<small class="form-element-hint">Please enter 10-digit Contact Number</small>
+				</div>
+				<div class="form-element form-input">
+					<input id="field-poc-email" class="form-element-field" placeholder=" " type="email" required/>
+					<div class="form-element-bar"></div>
+					<label class="form-element-label" for="field-poc-email">POC Email</label>
+					<small class="form-element-hint">We will never spam you!</small>
+				</div>
+			</fieldset>
+			<div class="form-actions">
+				<button class="form-btn" type="submit">Update</button>
+				<button class="form-btn-cancel -nooutline" type="reset">Cancel</button>
+			</div>
+		</form>
+      </div>
+    </div>
   </div>
+</div>
+<!-- /School Profile -->
 </section>
 
     <!-- ======= Teachers Tab ======= -->
 <section id="teachers" class="tabcontent">
-  <div class="grid">
-    <article></article>
-    <article></article>
-    <article></article>
-    <article></article>
-	<article></article>
-    <article></article>
-    <article></article>
-    <article></article>
-  </div>
+ <div id="teacher-profile" class="py-5 mt-5"></div>
 </section>
 
     <!-- ======= Calendar Tab ======= -->
 <section id="event-calendar" class="tabcontent">
-	<div class="grid">
+	<div class="grid py-4 mt-4">
 	<article>
 	  <div id="wrap">
 	  <div id='calendar'></div>
@@ -180,31 +307,161 @@
 
     <!-- ======= Complaint Tab ======= -->
 <section id="complaint" class="tabcontent">
-	<div class="grid">
-	<article>
-	  <div id="wrap">
-	  <div id='calendar'></div>
-	  </div>
-	</article>
+    <div class="row py-4">
+    <div class="col-md-8 mt-4">
+	<form class="form-card">
+		<fieldset class="form-fieldset">
+			<legend class="form-legend">New Complaint</legend>
+			<div class="form-checkbox form-checkbox-inline">
+				<div class="form-checkbox-legend">Nature Of Complaint:</div>
+				<label class="form-checkbox-label">
+					<input name=curriculum class="form-checkbox-field" type="checkbox" />
+					<i class="form-checkbox-button"></i>
+					<span>Curriculum</span>
+				</label>
+				<label class="form-checkbox-label">
+					<input name=teacher class="form-checkbox-field" type="checkbox" />
+					<i class="form-checkbox-button"></i>
+					<span>Teacher</span>
+				</label>
+				<label class="form-checkbox-label">
+					<input name=book class="form-checkbox-field" type="checkbox" />
+					<i class="form-checkbox-button"></i>
+					<span>Book</span>
+				</label>
+				<label class="form-checkbox-label">
+					<input name=others class="form-checkbox-field" type="checkbox" />
+					<i class="form-checkbox-button"></i>
+					<span>Others</span>
+				</label>
+			</div>
+			<div class="form-radio-legend">Severity</div>
+            <label class="form-radio-label">
+                <input name=severity class="form-radio-field" type="radio" required value="high" />
+                <i class="form-radio-button"></i>
+                <span>High</span>
+            </label>
+            <label class="form-radio-label">
+                <input name=severity class="form-radio-field" type="radio" required value="medium" />
+                <i class="form-radio-button"></i>
+                <span>Medium</span>
+            </label>
+            <label class="form-radio-label">
+                <input name=severity class="form-radio-field" type="radio" required value="Low" />
+                <i class="form-radio-button"></i>
+                <span>Low</span>
+            </label>
+            <small class="form-element-hint">Please choose the appropriate response</small>
+			<div class="form-element form-textarea">
+				<textarea rows="3" id="field-complaint-desc" class="form-element-field" placeholder=" "></textarea>
+				<div class="form-element-bar"></div>
+				<label class="form-element-label" for="field-complaint-desc">Complaint Description</label>
+			</div>
+		</fieldset>
+		<div class="form-actions">
+			<button class="form-btn" type="submit">Register Complaint</button>
+			<button class="form-btn-cancel -nooutline" type="reset">Cancel</button>
+		</div>
+    </form>
+	</div>
+	<div class="col-md-4 mt-4">
+	<div class="card shadow-sm" style="border-radius:10px;">
+          <div class="card-header bg-transparent text-center">
+            <h4>Escalation Matrix</h4>
+          </div>
+          <div class="card-body">
+			<table class="table table-bordered">
+				<tr><th width="60%">CRM Team</th> <td width="2%">:</td><td>24 hrs</td></tr>
+				<tr><th width="60%">Operations Head</th><td width="2%">:</td><td>24 hrs</td></tr>
+				<tr><th width="60%">Business Head</th><td width="2%">:</td><td>--</td></tr>
+			</table>
+		  </div>
+    </div>
+	</div>
 	</div>
 </section>
 
     <!-- ======= feedback Tab ======= -->
 <section id="feedback" class="tabcontent">
-	<div class="grid">
-	<article>
-	  <div id="wrap">
-	  <div id='calendar'></div>
-	  </div>
-	</article>
+    <div class="col-md-10 mt-4 py-4">
+	<form class="form-card">
+		<fieldset class="form-fieldset">
+			<legend class="form-legend">New Feedback/ Suggestion/ Testimonial</legend>
+			<div class="form-element form-textarea">
+				<textarea rows="3" id="field-feedback-desc" class="form-element-field" placeholder=" "></textarea>
+				<div class="form-element-bar"></div>
+				<label class="form-element-label" for="field-feedback-desc">Feedback Description</label>
+			</div>
+		</fieldset>
+		<div class="form-actions">
+			<button class="form-btn" type="submit">Send Feedback</button>
+			<button class="form-btn-cancel -nooutline" type="reset">Cancel</button>
+		</div>
+    </form>
+	</div>
 	</div>
 </section>
 
     <!-- ======= Reference Tab ======= -->
 <section id="reference" class="tabcontent">
-	<div class="grid">
-	<article>  
-	</article>
+<div class="container py-4 mt-4">
+<form class="form-card">
+			<fieldset class="form-fieldset">
+				<legend class="form-legend">Business Reference</legend>
+				<div class="row">
+				<div class="col-lg-6">
+					<div class="form-element form-input">
+						<input id="field-refer-school" class="form-element-field" placeholder="School Name" type="input" required/>
+						<div class="form-element-bar"></div>
+						<label class="form-element-label" for="field-refer-school">Name of the School Referred</label>
+					</div>
+					<div class="form-element form-input">
+						<input id="field-refer-location" class="form-element-field" placeholder="Location" type="input" required/>
+						<div class="form-element-bar"></div>
+						<label class="form-element-label" for="field-refer-location">Location of the School</label>
+					</div>
+					<div class="form-element form-input">
+						<input id="field-refer-poc-name" class="form-element-field" placeholder="Please enter Full Name" type="input" required/>
+						<div class="form-element-bar"></div>
+						<label class="form-element-label" for="field-refer-poc-name">Point Of Contact</label>
+					</div>
+					<div class="form-element form-input">
+						<input id="field-refer-poc-email" class="form-element-field" placeholder=" " type="email"/>
+						<div class="form-element-bar"></div>
+						<label class="form-element-label" for="field-refer-poc-email">Email</label>
+						<small class="form-element-hint">This field is not required.</small>
+					</div>
+					<div class="form-element form-input">
+						<input id="field-refer-school-number" class="form-element-field" placeholder="Please fill in School Phone Number" type="input"/>
+						<div class="form-element-bar"></div>
+						<label class="form-element-label" for="field-refer-school-number">Phone Number</label>
+						<small class="form-element-hint">This field is not required.</small>
+					</div>
+				</div>
+			    <div class="col-lg-6">
+					<div class="form-element form-input">
+						<input id="field-referred-name" class="form-element-field" placeholder="Please enter Full Name" type="input" required/>
+						<div class="form-element-bar"></div>
+						<label class="form-element-label" for="field-referred-name">Referred By</label>
+					</div>
+					<div class="form-element form-input">
+						<input id="field-referred-designation" class="form-element-field" placeholder=" " type="input"/>
+						<div class="form-element-bar"></div>
+						<label class="form-element-label" for="field-referred-designation">Designation</label>
+					</div>
+					<div class="form-element form-input">
+						<input id="field-referred-number" class="form-element-field" placeholder="Please fill in your Phone Number" type="input"/>
+						<div class="form-element-bar"></div>
+						<label class="form-element-label" for="field-referred-number">Phone Number</label>
+					</div>
+				</div>
+				</div>
+			</fieldset>
+			<div class="form-actions">
+				<button class="form-btn" type="submit">Send inquiry</button>
+				<button class="form-btn-cancel -nooutline" type="reset">Cancel</button>
+			</div>
+		</form>
 	</div>
 </section>
     <!-- ======= Footer ======= -->
@@ -243,14 +500,22 @@
 
 
   <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-   <script src="assets/js/dashboard.js"></script>
+  <script src="assets/js/dashboard.js"></script>
   <!--page specific-->
   <script>
 //Rendering animation
 AOS.init({
   duration: 1200,
 });
+
+function showBillingInformation() {
+  var x = document.getElementById("billing");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
 
 function openTab(evt, tab) {
   var i, tabcontent, tablinks;

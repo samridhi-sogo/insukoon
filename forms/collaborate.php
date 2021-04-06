@@ -16,7 +16,7 @@ $organization=$_POST['organization'];
 $mail->setFrom('no-reply@insukoon.com');
 $adminmail='no-reply@insukoon.com';
 $mail->addAddress($adminmail);
-$mail->Subject = $_POST['subject'];;
+$mail->Subject = "Request to Collaborate with ". $organization;
 // Set HTML 
 $mail->isHTML(TRUE);
  $mail->Body = "

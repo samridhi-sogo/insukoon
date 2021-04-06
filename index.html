@@ -38,7 +38,7 @@
   <section id="topbar" class="d-flex d-lg-block">
     <div class="container d-flex">
       <div class="contact-info mr-auto left-container">
-        <a href="mailto:info@insukoon.com" class="tilf" ><i class="icofont-envelope"></i><span>info@insukoon.com</span></a>
+        <a href="mailto:info@insukoon.com" style="padding-top:8px"><i class="icofont-envelope"></i><span>info@insukoon.com</span></a>
         <!-- <i class="icofont-phone"></i><span> +1 5589 55488 55 </span> -->
 		<a href="https://twitter.com/insukoon" class="tilf twitter" target="_blank"><i class="icofont-twitter"></i> <span>@insukoon</span></a>
         <a href="https://www.facebook.com/insukoon.company/" class="tilf facebook" target="_blank"><i class="icofont-facebook"></i><span>@insukoon.company</span></a>
@@ -47,9 +47,9 @@
       </div>
       <div class="social-links">
       </div>
-	  <!-- <div class="right-container"> -->
-		<!-- <button class="social-container-button" onclick="javascript:schoolLogin()"><span class="short-text">School Login</span> <span class="long-text" style=""><i class="icofont-login"></i></span></button> -->
-	  <!-- </div> -->
+	  <div class="right-container">
+		<button class="social-container-button" onclick="javascript:schoolLogin()"><span class="short-text">School Login</span> <span class="long-text" style=""><i class="icofont-login"></i></span></button>
+	  </div>
     </div>
   </section>
 
@@ -85,10 +85,10 @@
           <!-- </li> -->
 
           <li><a href="#what-we-do">Services</a></li>
-		  <li><a href="#whyus">Our USP</a></li>
+		  <!-- <li><a href="#whyus">Our USP</a></li> -->
           <li><a href="#patrons">Our Patrons</a></li>
           <li><a href="#contact">Contact Us</a></li>
-          <li><a href="career-page.html" style="border-bottom: 2px solid">We're Hiring!</a></li>
+          <li><a href="career-page.html" style="background: #cce6ff;">We're Hiring!</a></li>
         </ul>
       </nav><!-- .nav-menu-->
 
@@ -96,7 +96,7 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
+  <section id="hero" class="lazy-background d-flex flex-column justify-content-end align-items-center">
     <div id="heroCarousel" class="container carousel carousel-fade" data-ride="carousel">
 
       <!-- Slide 1 -->
@@ -153,49 +153,65 @@
       <g class="wave2">
         <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
       </g>
-      <g class="wave3">
+	  <g class="wave3">
+        <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .3)">
+      </g>
+	  <g class="wave4">
         <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
       </g>
     </svg>
 
   </section><!-- End Hero -->
-
-	   <!-- ======= Test Section =======-->
-    <!-- <section id="test" class="test"> -->
-	<!-- <div class="container"> -->
-      <!-- <div class="tester row  no-gutters "> -->
-	  	<!-- <div id="title"> -->
-		<!-- <h2>Experience</h2> -->
-		<!-- <h4>our programs</h4> -->
-		<!-- <p>Linking College, Career, and Community</p> -->
-	<!-- </div> -->
-	  <!-- </div> -->
-	<!-- </div> -->
-	<!-- </section> -->
+  
 	   <!-- ======= About Section =======-->
     <section id="about" class="about">
+	<svg class="about-wave" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+      <defs>
+        <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+      </defs>
+      <g class="wave4">
+        <use xlink:href="#wave-path" x="50" y="3" fill="#fff">
+      </g>
+	</svg>
     <div class="row  no-gutters ">
 		<div class="col-md-6 mt-4 about-col-1 pt-4 pt-lg-0">
-		  <div class="about-headings">
-            <div class="section-title">
-				<h2 style="text-align: left;">About</h2>
-				<p style="text-align: left">Who We Are</p>
-			</div>
-			<!-- <p style="font-size:0.9rem;" data-aos="fade-right">Please watch the below video to know about INSUKOON.</p> -->
-				<!-- <video controls autoplay muted poster="assets/img/about-vid.jpg" data-aos="fade-right"> -->
-                   <!-- <source src="assets/vid/intro.mp4" type="video/mp4"> -->
-					 <!-- Your browser does not support the video tag. -->
-				<!-- </video> -->
-            <p style="margin-right:90px; z-index:5">
-              INSUKOON is a Start-up company formed with the core purpose of accelerating imperative growth of every child through a very well-researched curriculum. Our program emphasizes the importance of non-academic subjects for students, teachers, parents and school management which we firmly believe is ‘Future of Education’.<br/>
-			<br/>At INSUKOON we strongly perceive that each step taken by a child through our well-designed curriculum will be one giant leap towards a better mankind.
-			<br/>
-			</p>
-			<!-- <p><br/><a href="" data-toggle="modal" data-target="#videoModal" style="color:#fff;"><strong>Learn more >>></strong></a></p> -->
-		   </div>
-          </div>
-		  <div class="col-md-6 mt-4 about-col-2 pt-4 pt-lg-0">
-            <div class="card" style="background-image: url('assets/img/about.jpg');">
+		  <div class="row no-gutters ">
+			  <div class="about-headings">
+				<div class="section-title">
+					<h2 style="text-align: left;">About</h2>
+					<p style="text-align: left">Who We Are</p>
+				</div>
+				<!-- <p style="font-size:0.9rem;" data-aos="fade-right">Please watch the below video to know about INSUKOON.</p> -->
+					<!-- <video controls autoplay muted poster="assets/img/about-vid.jpg" data-aos="fade-right"> -->
+					   <!-- <source src="assets/vid/intro.mp4" type="video/mp4"> -->
+						 <!-- Your browser does not support the video tag. -->
+					<!-- </video> -->
+				<p class="description" style="margin-right:90px; z-index:5">
+				  INSUKOON is a start-up company formed with the core purpose of accelerating imperative growth of every child through a very well-researched curriculum. Our program emphasizes the importance of non-academic subjects for students, teachers, parents and school management which we firmly believe is ‘Future of Education’.<br/>
+				<br/>At INSUKOON we strongly perceive that each step taken by a child through our well-designed curriculum will be one giant leap towards a better mankind.<br/>
+				<br/><strong>To Learn more, please watch the video:</strong> <a href="assets/vid/intro.mp4" class="btn-play-video">Play Video &nbsp;&nbsp;<i class="icofont-video-alt"></i></a> 
+				<br/>
+				</p>
+				<!-- <p><br/><a href="" data-toggle="modal" data-target="#videoModal" style="color:#fff;"><strong>Learn more >>></strong></a></p> -->
+			   </div>
+			 </div>
+			 <!-- ======= Video Section ======= 
+			 <div class="row no-gutters ">
+				<div id="video" class="lazy-background text-center">
+				  <div class="overlay">
+					<div class="container-fluid container-full" data-aos="zoom-in">
+
+					  <div class="row">
+						<a href="assets/vid/intro.mp4" class="js-modal-btn play-btn" data-video-id="s22ViV7tBKE"></a>
+					  </div>
+
+					</div>
+				  </div>
+				</div>
+			 </div><!-- End Video Section -->
+        </div>
+		<div class="col-md-6 mt-4 about-col-2 pt-4 pt-lg-0">
+            <div class="lazy-background card" style="background-image: url('assets/img/about.jpg');">
               <div class="card-body" data-aos="fade-left">
                 <h5 class="card-title"><a href="">Our Mission</a></h5>
                 <p class="card-text">To tap into the intrinsic motivation of every child in the world by reshaping their days towards leading a phenomenal life.</p>
@@ -212,22 +228,10 @@
                 <!-- <div class="read-more"><a href="#" data-toggle="modal" data-target="#videoModal"><i class="icofont-arrow-right"></i> Learn More</a></div> -->
               </div>
             </div>
-	</div>
+	    </div>
+		<div class="clearfix"></div>
     </section><!-- End About Section -->
-	
-	<!-- ======= Video Section ======= -->
-    <section id="video" class="text-center">
-      <div class="overlay">
-        <div class="container-fluid container-full" data-aos="zoom-in">
-
-          <div class="row">
-            <a href="assets/vid/intro.mp4" class="js-modal-btn play-btn" data-video-id="s22ViV7tBKE"></a>
-          </div>
-
-        </div>
-      </div>
-    </section><!-- End Video Section -->
-	
+		
 	<!-- modal  -->
 	<div class="modal fade videoModal" id="videoModal" role="dialog">
 	 <div class="modal-dialog modal-dialog-centered">
@@ -250,7 +254,7 @@
 	</div>
 	<!-- end modal -->
 
- <!-- ======= Collaborate CTA ========
+ <!-- ======= Collaborate CTA ========-->
   <div id="collaborate-banner" class="collaborate-banner" data-aos="fade-right">
   <div class="collaborate-banner-inner">
     <div class="collaborate-banner-description"> 
@@ -282,7 +286,7 @@
   
 <!--========login Page section ========-->
 <div id="page-login-collaborate" class="page-login-collaborate">
-  <section id="login-form" class="login-form">
+  <section id="login-form" class="lazy-background login-form">
   <div class="login-reg-panel">
 		<div class="login-info-box">
 			<h2>Have an account?</h2>
@@ -303,24 +307,36 @@
 				<h2>WELCOME BACK!</h2>
 				<input type="text" placeholder="School ID">
 				<input type="password" placeholder="School Code">
-				<input type="button" onclick="location.href='school-dash.html'" value="Login">
+				<input type="button" onclick="" value="Login">
 				<!-- <a href="">Forgot password?</a> -->
 			</div>
 			<div class="register-show">
 				<h2>GET STARTED!</h2>
-				<input type="text" placeholder="School Name">
-				<input type="text" placeholder="Your Name">
-				<input type="text" placeholder="Phone Number">
-				<input type="text" placeholder="Email">
-				<input type="text" placeholder="Purpose of Collaboration">
-				<input type="button" value="Book a Call">
+				<form role="form" id="collaborate-form" class="collaborate-form" action="forms/collaborate.php" >
+					<div class="form-group"><input type="text" placeholder="Your Name" name="person" id="person" data-rule="minlen:4" data-msg="Please enter at least 4 chars"><div class="validate"></div></div>
+					<p style="margin:0 !important;"> You represent: </p>
+					<div class="form-group"><input type="radio" id="ngo" name="radio-group" class="collaboration-input radio"><label for="ngo">NGO</label>  
+				    <input type="radio" id="school" name="radio-group" class="collaboration-input radio" checked> <label for="school">School</label>
+					<input type="radio" id="pre-school" name="radio-group" data-toggle="tooltip" data-html="true" data-placement="left" data-trigger="hover" title="We are not catering to Pre-Schools right now!<br/>We will contact you as soon as we are!" class="collaboration-input radio"><label for="pre-school" data-toggle="tooltip" data-html="true" data-placement="right" title="We are not catering to Pre-S
+					chools right now!<br/>We will contact you as soon as we are!">Pre-School</label><div class="validate"></div></div>
+					<div class="form-group"><input type="text" name="organization" id="organization" placeholder="Organization Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars"><div class="validate"></div></div>
+					<div class="form-group"><input type="text" name="phoneno" id="phoneno" placeholder="Phone Number" data-rule="regexp:^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$" data-msg="Please enter a valid phone number (10 digits)"><div class="validate"></div></div>
+					<div class="form-group"><input type="text" name="emailid" id="emailid" placeholder="Email" data-rule="email" data-msg="Please enter a valid email"><div class="validate"></div></div>
+					<!-- <input type="text" placeholder="Purpose of Collaboration"> -->
+					<div class="mb-3">
+						<div class="loading">Loading</div>
+						<div class="error-message">Your mail could not be sent at this time, please try again later!</div>
+						<div class="sent-message">Your message has been sent. Thank you!</div>
+					</div>
+					<button type="submit" id="btn-collaborate" class="btn-collaborate">Book a Call</button>
+				</form>
 			</div>
 		</div>
 	</div>
 </div>
 
 <!-- ======= What We Do Section ======= -->
-    <section id="what-we-do" class="what-we-do" style="padding:60px 0">
+    <section id="what-we-do" class="what-we-do" style="padding:20px 0">
       <div class="container">
 
         <div class="section-title" data-aos="zoom-out">
@@ -347,7 +363,7 @@
               <h4><a href="" data-toggle="modal" data-target="#servicesModal-2">Students</a></h4>
 			  <p><strong>"Introducing Savior Science"</strong></p>
 			  <div class="highlights" style="color: #f04dc8;">Key Highlights:</div>
-              <p>Purpose of life<br/>Visualisation - Affirmations<br/>Goals Setting<br/> <br/>
+              <p>Purpose of Education<br/>Visualisation - Affirmations<br/>Goals Setting<br/> <br/>
 			  <a href="" data-toggle="modal" data-target="#servicesModal-2"><strong>Read Full List >>></strong></a>			  
 			  </p>
             </div>
@@ -414,7 +430,7 @@
 				<!--<img class='img-size' src="assets/img/benefits-2.png" alt="benefits for the School Management">-->
 				<div class="content" id="benefits-2">
 				<p>
-				Purpose of life<br/> Visualisation - Affirmations<br/> Goals Setting<br/> Fortitude, Solitude, Gratitude<br/> Mental and Physical Fitness (Meditation, Yoga, Mudras, Excercise)<br/> Brain Nutrition <br/> Grow to Eat<br/> Social and Emotional Enhancers<br/> Mind Conditioning - Impacts of thoughts on brain<br/> Habit Formation<br/> Learning Health - Improving concentration and reading speed <br/> how to read and remember...Digital Dementia<br/> Sleep Recession<br/>Learn, How to Learn<br/> Metacognition - Meta Memory Getting ready for exams <br/> Brain Workout<br/>
+				Purpose of Education<br/> Visualisation - Affirmations<br/> Goals Setting<br/> Fortitude, Solitude, Gratitude<br/> Mental and Physical Fitness (Meditation, Yoga, Mudras, Excercise)<br/> Brain Nutrition <br/> Grow to Eat<br/> Social and Emotional Enhancers<br/> Mind Conditioning - Impacts of thoughts on brain<br/> Habit Formation<br/> Learning Health - Improving concentration and reading speed <br/> how to read and remember...Digital Dementia<br/> Sleep Recession<br/>Learn, How to Learn<br/> Metacognition - Meta Memory Getting ready for exams <br/> Brain Workout<br/>
 				</p>
 				</div>
 				</div>
@@ -497,8 +513,8 @@
 	<div class="row no-gutters ">
      <div id="faq-col-1" class="col-md-4 mt-4 faq-col-1 pt-4 pt-lg-0"> 
         <div id="faq-title" class="section-title" data-aos="zoom-out">
-          <h2>emerging issues</h2>
-          <p>Rippling Concerns</p>
+          <h2 style="text-align: left;">emerging issues</h2>
+          <p style="text-align: left;">Rippling Concerns</p>
         </div>
 		<div class="ripple"></div>
 	  </div>
@@ -523,11 +539,11 @@
           </div>
 
           <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in" data-aos-delay="200">
-            <!-- <ul style="list-style: none; padding: 0;"> -->
-              <!-- <li><i class="icofont-question"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequa</li> -->
-              <!-- <li><i class="icofont-question"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li> -->
-              <!-- <li><i class="icofont-question"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</li> -->
-            <!-- </ul> -->
+            <ul style="list-style: none; padding: 0;">
+              <li><i class="icofont-question"></i> What is the prerequisite of success for your child?</li>
+              <li><i class="icofont-question"></i> Is fear pulling your child back from taking initiatives?</li><br/>
+              <li><i class="icofont-question"></i> Does your child give up easily?</li>
+            </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in" data-aos-delay="300">
@@ -681,7 +697,7 @@
 			<div class="clients" data-aos="fade-in">
 			  <div class="client-logo">
 				<a href="javascript:showTestimonialText('testimonial-3')">
-				  <img id="testimonial-3" src="assets/img/testimonials/testimonials-3.jpg" alt="I am writing to you to express my gratitude to team INSUKOON for organizing sessions for Maher Rising Star children and youth. The sessions were very interesting covering various topics of right health, attitude, thoughts, tapping into brain power, mental agility, habit formation, gratitude, digital dementia, Emotional distress, eliminating the Brain Fog, (Behavioral aspects, Physical aspects etc).
+				  <img id="testimonial-3" src="assets/img/testimonials/testimonials-3.jpg" loading="lazy" alt="I am writing to you to express my gratitude to team INSUKOON for organizing sessions for Maher Rising Star children and youth. The sessions were very interesting covering various topics of right health, attitude, thoughts, tapping into brain power, mental agility, habit formation, gratitude, digital dementia, Emotional distress, eliminating the Brain Fog, (Behavioral aspects, Physical aspects etc).
 				<br/> <strong>- Maher Founder Director (Sr. Lucy Kurien)</strong>" width="100" height="auto">
 				</a>
 			  </div>
@@ -729,7 +745,7 @@
 		    <div class="team-cover">
 			  <div class="member" data-aos="fade-up">
               <div class="member-img">
-                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                <img src="assets/img/team/team-2.jpg" loading="lazy" class="img-fluid" alt="">
                 <!-- <div class="social"> -->
                   <!-- <a href=""><i class="icofont-twitter"></i></a> -->
                   <!-- <a href=""><i class="icofont-facebook"></i></a> -->
@@ -747,7 +763,7 @@
 			<div class="team-cover">
 			  <div class="member" data-aos="fade-up">
               <div class="member-img">
-                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                <img src="assets/img/team/team-1.jpg" loading="lazy" class="img-fluid" alt="">
                 <!-- <div class="social"> -->
                   <!-- <a href=""><i class="icofont-twitter"></i></a> -->
                   <!-- <a href=""><i class="icofont-facebook"></i></a> -->
@@ -769,7 +785,7 @@
     </section><!-- End Team Section -->
 
 <!-- ======= Cta Section ======= -->
-    <section id="cta" class="cta">
+    <section id="cta" class="lazy-background cta">
       <div class="container">
 
         <div class="row  no-gutters " data-aos="zoom-in">
@@ -836,7 +852,7 @@
       </div>
     </section><!-- End Counts Section -->
 	
-	<!-- ======= Contact Section ======= -->
+	    <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact section-bg">
       <div class="container">
 
@@ -844,12 +860,12 @@
           <h2>Contact</h2>
           <p>Contact Us</p>
         </div>
-	    <div>
-		<iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d316663.8180276853!2d73.65285070505342!3d18.555255481650015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sjp!4v1611646366037!5m2!1sen!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		<div>
+		<iframe style="border:0; width: 100%; height: 270px;" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d316663.8180276853!2d73.65285070505342!3d18.555255481650015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sjp!4v1611646366037!5m2!1sen!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 		</div>
-        <div class="row mt-5 no-gutters ">
+        <div class="row mt-5">
 
-          <div id="contact-panel" class="col-lg-4 col-sm-4" data-aos="fade-right">
+          <div class="col-lg-4" data-aos="fade-right">
             <div class="info">
               <div class="address">
                 <i class="icofont-google-map"></i>
@@ -864,13 +880,6 @@
                 <p>info@insukoon.com</p>
               </div>
 			</div>
-			<!-- <div class="info">   -->
-			  <!-- <div class="email"> -->
-                <!-- <i class="icofont-live-support"></i> -->
-                <!-- <h4>Customers:</h4> -->
-                <!-- <p>crm@insukoon.com</p> -->
-              <!-- </div> -->
-			<!-- </div> -->
 			<div class="info">  
 			  <div class="email">
                 <i class="icofont-search-job"></i>
@@ -878,17 +887,52 @@
                 <p>hr@insukoon.com</p>
               </div>
 			</div>
+			<div class="info">  
+			  <div class="email">
+                <i class="icofont-clock-time"></i>
+                <h4>Working Hours:</h4>
+                <p>Mon-Sat 9:00AM-18:00PM IST <br/> <a href="" data-toggle="modal" data-target="#holiday-calendar">Holiday Calendar</a> </p>
+              </div>
+			</div>
               <!-- <div class="phone"> -->
                 <!-- <i class="icofont-phone"></i> -->
                 <!-- <h4>Call:</h4> -->
                 <!-- <p>+91-9021006744</p> -->
               <!-- </div> -->
-
-            
-
           </div>
+		  
+		  	<!--modal--> 
+			<!--benefits to school-->
+			<div class="modal fade servicesModal" id="holiday-calendar" role="dialog">
+			 <div class="modal-dialog modal-dialog-centered">
+				<!-- Modal content-->
+				<div class="modal-content modal-sm">
+					<div class="modal-header">
+						<p class="modal-title">Holiday Calendar</p>
+						<a class="close-modal-top" href="#" data-dismiss="modal">X</a>
+					</div>
+					<div class="modal-body text-container">
+						<!-- <img class='img-size' src="assets/img/benefits-1.png" alt="benefits for the School Management"> -->
+						<table>
+						  <tr><th>Date</th><th>Day</th><th>Holiday</th></tr>
+						  <tr><td>01-Jan-2021</td><td>Friday</td><td>New Year's Day</td></tr>
+						  <tr><td>26-Jan-2021</td><td>Tuesday</td><td>Republic Day</td></tr>
+						  <tr><td>29-Mar-2021</td><td>Monday</td><td>Holi</td></tr>
+						  <tr><td>02-Apr-2021</td><td>Friday</td><td>Good Friday</td></tr>
+						  <tr><td>15-Aug-2021</td><td>Sunday</td><td>Independence Day</td></tr>
+						  <tr><td>22-Aug-2021</td><td>Sunday</td><td>Rakshabandhan/Rakhi</td></tr>
+						  <tr><td>10-Sep-2021</td><td>Friday</td><td>Ganesh Chaturthi</td></tr>
+						  <tr><td>02-Oct-2021</td><td>Saturday</td><td>Gandhi Jayanti</td></tr>
+						  <tr><td>04-Nov-2021</td><td>Thursday</td><td>Diwali</td></tr>
+						  <tr><td>25-Dec-2021</td><td>Saturday</td><td>Christmas Day</td></tr>
+						</table>
+						<button type="button" class="btn close-modal" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			 </div>
+			</div>
 
-          <div id="form-panel" class="col-lg-8 col-sm-8 mt-5 mt-lg-0" data-aos="fade-left">
+          <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left">
 
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="form-group">
@@ -897,7 +941,7 @@
               </div>
 			  <div class="form-row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="phone" class="form-control" id="phone" placeholder="Your Phone Number" data-rule="minlen:10" data-msg="Please enter at least 10 digits" />
+                  <input type="text" name="phone" class="form-control" id="phone" placeholder="Your Phone Number" data-rule="regexp:^(1\s|1|)?((\(\d{3}\))|\d{3})(\-|\s)?(\d{3})(\-|\s)?(\d{4})$" data-msg="Please enter a valid phone number (10 digits)" />
                   <div class="validate"></div>
                 </div>
                 <div class="col-md-6 form-group">
@@ -916,7 +960,7 @@
               <div class="mb-3">
                 <div class="loading">Loading</div>
                 <div class="error-message">Your mail could not be sent at this time, please try again later!</div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+                <div class="sent-message">Thank you for contacting us!</div>
               </div>
               <div class="text-center"><button name="submit" type="submit">Send Message</button></div>
             </form>
@@ -1048,8 +1092,9 @@ $(document).ready(function(){
 					duration: 3000,
 					event:"mousemove"
 				});
+			  $('[data-toggle="tooltip"]').tooltip();
 			});
-//Rendering animation
+//Rendering animation on scroll
 AOS.init({
   duration: 1200,
 });
@@ -1071,6 +1116,53 @@ function checkOverflow(el)
 
    return isOverflowing;
 }
+//For lazy-loading the background images ( website became slowwww...)
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages;    
+
+  if ("IntersectionObserver" in window) {
+    lazyloadImages = document.querySelectorAll(".lazy-background");
+    var imageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var image = entry.target;
+          image.classList.remove("lazy-background");
+          imageObserver.unobserve(image);
+        }
+      });
+    });
+
+    lazyloadImages.forEach(function(image) {
+      imageObserver.observe(image);
+    });
+  } else {  
+    var lazyloadThrottleTimeout;
+    lazyloadImages = document.querySelectorAll(".lazy-background");
+    
+    function lazyload () {
+      if(lazyloadThrottleTimeout) {
+        clearTimeout(lazyloadThrottleTimeout);
+      }    
+
+      lazyloadThrottleTimeout = setTimeout(function() {
+        var scrollTop = window.pageYOffset;
+        lazyloadImages.forEach(function(img) {
+            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy-background');
+            }
+        });
+        if(lazyloadImages.length == 0) { 
+          window.removeEventListener("resize", lazyload);
+          window.removeEventListener("orientationChange", lazyload);
+        }
+      }, 20);
+    }
+    window.addEventListener("resize", lazyload);
+    window.addEventListener("orientationChange", lazyload);
+  }
+})
+
 </script>
 
 </body>
