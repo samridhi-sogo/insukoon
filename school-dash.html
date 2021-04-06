@@ -33,15 +33,6 @@
   * Author: Samridhi Jain
   ======================================================== -->
   <style>
-  .line {
-  width: 100%;
-  max-width: 800px;
-  height: 8px;
-  margin: 0 0 10px 0;
-  position: relative;
-  display: inline-block;
-  background-color: rgba(255,255,255,1);
-}
   </style>
   </head>
 
@@ -335,23 +326,25 @@
 					<span>Others</span>
 				</label>
 			</div>
-			<div class="form-radio-legend">Severity</div>
-            <label class="form-radio-label">
-                <input name=severity class="form-radio-field" type="radio" required value="high" />
-                <i class="form-radio-button"></i>
-                <span>High</span>
-            </label>
-            <label class="form-radio-label">
-                <input name=severity class="form-radio-field" type="radio" required value="medium" />
-                <i class="form-radio-button"></i>
-                <span>Medium</span>
-            </label>
-            <label class="form-radio-label">
-                <input name=severity class="form-radio-field" type="radio" required value="Low" />
-                <i class="form-radio-button"></i>
-                <span>Low</span>
-            </label>
-            <small class="form-element-hint">Please choose the appropriate response</small>
+			<div class="form-radio form-radio-inline">
+				<div class="form-radio-legend">Severity</div>
+				<label class="form-radio-label">
+					<input name=severity class="form-radio-field" type="radio" required value="high" />
+					<i class="form-radio-button"></i>
+					<span>High</span>
+				</label>
+				<label class="form-radio-label">
+					<input name=severity class="form-radio-field" type="radio" required value="medium" />
+					<i class="form-radio-button"></i>
+					<span>Medium</span>
+				</label>
+				<label class="form-radio-label">
+					<input name=severity class="form-radio-field" type="radio" required value="Low" />
+					<i class="form-radio-button"></i>
+					<span>Low</span>
+				</label>
+				<small class="form-element-hint">Please choose the response according to the risk that it poses.</small>
+			</div>
 			<div class="form-element form-textarea">
 				<textarea rows="3" id="field-complaint-desc" class="form-element-field" placeholder=" "></textarea>
 				<div class="form-element-bar"></div>
