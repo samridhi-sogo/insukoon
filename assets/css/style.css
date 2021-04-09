@@ -74,6 +74,19 @@ overflow-x: hidden !important;
 }
 
 /*--------------------------------------------------------------
+# Document
+--------------------------------------------------------------*/
+.document {
+	font-size:14px;
+	text-align:justify;
+	margin: 20px;
+	padding:25px 75px;
+	background: #f9ecf4;
+	border-radius: 8px;
+	box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
+}
+
+/*--------------------------------------------------------------
 # Top Bar
 --------------------------------------------------------------*/
 #topbar {
@@ -2968,4 +2981,53 @@ div.client-logo img {
   color: #f7fbfe;
   font-size: 14px;
   background: #444444;
+}
+#footer .social-links {
+  margin-top: 10px;
+}
+
+#footer .social-links a {
+  font-size: 16px;
+  display: inline-block;
+  background: #80c1ff;
+  color: #fff;
+  line-height: 1;
+  padding: 6px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  border-right: 2px solid;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  transition: 0.3s;
+}
+
+#footer .social-links a:hover {
+  background: #3498db;
+  color: #fff;
+  text-decoration: none;
+}
+
+#footer .social-links .employee-login {
+  font-size: 14px;
+  display: inline-block;
+  background: none;
+  color: #fff;
+  line-height: 1;
+  padding: 6px 0;
+  margin-right: 4px;
+  border-radius: 100%;
+  border-right: none;
+  text-align: center;
+  width: 130px;
+  height: 30px;
+  transition: 0.3s;
+}
+
+#footer .social-links .employee-login:hover {
+  background: #3498db;
+  color: #fff;
+  border-radius: 2px;
+  border-right: none;
+  text-decoration: none;
 }
