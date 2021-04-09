@@ -1,0 +1,184 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  font-family: "Raleway", sans-serif;
+  color: #444444;
+  overflow-x:hidden;
+}
+
+a {
+  color: #3498db;
+}
+
+a:hover {
+  color: #5faee3;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+/*to solve the overflow problem on mobile devices */
+@media (max-width: 768px) {
+html, body {
+width: auto !important;
+overflow-x: hidden !important;
+}
+}
+
+.responsive-tabs.nav-tabs {
+  position: relative;
+  z-index: 10;
+  height: 42px;
+  overflow: visible;
+  border-bottom: none;
+}
+
+.responsive-tabs.nav-tabs i.fa {
+  position: absolute;
+  top: 14px;
+  right: 22px;
+}
+.responsive-tabs.nav-tabs i.fa.fa-caret-up {
+  display: none;
+}
+
+.responsive-tabs.nav-tabs > li {
+  display: none;
+  float: none;
+  text-align: center;
+}
+.responsive-tabs.nav-tabs > li:last-of-type > a {
+  margin-right: 0;
+}
+.responsive-tabs.nav-tabs > li > a {
+  margin-right: 0;
+  /* background: #fff; */
+  border: 1px solid #DDDDDD;
+}
+
+.responsive-tabs.nav-tabs > li.active {
+  display: block;
+}
+.responsive-tabs.nav-tabs > li.active a {
+  border: 1px solid #DDDDDD;
+  border-radius: 2px;
+}
+
+.responsive-tabs.nav-tabs.open i.fa.fa-caret-up {
+  display: block;
+}
+
+.responsive-tabs.nav-tabs.open i.fa.fa-caret-down {
+  display: none;
+}
+.responsive-tabs.nav-tabs.open > li {
+  display: block;
+}
+.responsive-tabs.nav-tabs.open > li a {
+  border-radius: 0;
+}
+.responsive-tabs.nav-tabs.open > li:first-of-type a {
+  border-radius: 2px 2px 0 0;
+}
+.responsive-tabs.nav-tabs.open > li:last-of-type a {
+  border-radius: 0 0 2px 2px;
+}
+.tab-content{
+	color:#fff;
+    padding: 25px 20px;
+    background:#545f60;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 8px 12px 25px 2px rgba(0, 0, 0, 0.4);
+}
+
+.nav-tabs{
+    border-bottom:0 none;
+    margin-top: 20px;
+}
+
+.nav-tabs .nav-link {
+    font-size:14px;
+    color:#fff;
+    margin-right:0;
+    padding:10px 45px;
+    border-radius:0;
+    overflow: hidden;
+    background:#9a5379;
+    text-transform:uppercase;
+    box-shadow: 8px 12px 25px 2px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease 0s;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+}
+
+.nav-tabs li:first-child a{
+    border-top-left-radius:8px;
+}
+.nav-tabs li:last-child a{
+    border-top-right-radius:8px;
+}
+
+.nav-tabs li a:hover, .nav-tabs li.active a:hover, .nav-tabs li.active a{
+    background:#545f60;
+    color:#fff;
+    margin-top: -19px;
+    padding:20px 45px;
+    border:1px solid #545f60;
+}
+
+@media (min-width: 768px) {
+  .responsive-tabs.nav-tabs {
+    display: block;
+  }
+  .responsive-tabs.nav-tabs {
+    display: block;
+    flex-wrap: none;
+  }
+    .responsive-tabs.nav-tabs i.fa {
+    display: none;
+  }
+  .responsive-tabs.nav-tabs > li.active {
+    display: block;
+  }
+  .responsive-tabs .nav-link >li:after{
+	 content: "☰";
+	 position: absolute;
+	 top: 8px;
+	 right: 15px;
+	 z-index: 2;
+	 pointer-events: none; 
+  }
+  .responsive-tabs.nav-tabs > li > a {
+    margin-right: 4px;
+  }
+  .responsive-tabs.nav-tabs > li {
+    display: block;
+    float: left;
+  }
+  .responsive-tabs.nav-tabs > li.active a {
+	background: #545f60;
+    color: #fff;
+    border-bottom-color: transparent;
+  }
+  .responsive-tabs.nav-tabs.open i.fa.fa-caret-up {
+    display: none;
+  }
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  color: #f7fbfe;
+  font-size: 14px;
+  background: #444444;
+  position:absolute;
+  width:100%;
+  bottom:0px;
+  left:0;
+  z-index:2;
+}
