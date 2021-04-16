@@ -19,7 +19,7 @@ var defaults = {
 
 	// display
 	defaultView: 'month',
-	aspectRatio: 1.35,
+	aspectRatio: 1.2,
 	header: {
 		left: 'title',
 		center: '',
@@ -31,15 +31,15 @@ var defaults = {
 	weekNumberTitle: 'W',
 	
 	// editing
-	//editable: false,
-	//disableDragging: false,
-	//disableResizing: false,
+	// editable: false,
+	disableDragging: false,
+	disableResizing: false,
 	
 	allDayDefault: true,
 	ignoreTimezone: true,
 	
 	// event ajax
-	lazyFetching: true,
+	lazyFetching: false,
 	startParam: 'start',
 	endParam: 'end',
 	
