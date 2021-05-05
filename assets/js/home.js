@@ -85,9 +85,13 @@ function counterDisplay(){
 			//total30day.innerHTML=visitor30day;
 	});
 }
+
 $(document).ready(function() {
     counterDisplay();
 	showOnlineVisitors() ;
+	getNewCaptcha();
+	getNewCollaborateCaptcha();
+    console.log('init:' + rightCode);
     });
 
   $(".social-container-button").hover(function() {

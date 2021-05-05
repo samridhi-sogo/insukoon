@@ -12,6 +12,10 @@
     var f = $(this).find('.form-group'),
       ferror = false,
       emailExp = /^[^\s()<>@,;:\/]+@\w[\w\.-]+\.[a-z]{2,}$/i;
+	
+	if(!validateCaptcha()){
+		ferror=true;
+	}
 
     f.children('input').each(function() { // run all inputs
      
@@ -94,11 +98,16 @@
         i.next('.validate').html((ierror ? (i.attr('data-msg') != undefined ? i.attr('data-msg') : 'wrong Input') : '')).show('blind');
       }
     });
-    if (ferror) return false;
-
+    
     var this_form = $(this);
     var action = $(this).attr('action');
-
+	if (ferror){
+		getNewCaptcha();
+		this_form.find('.sent-message').slideUp();
+		this_form.find('.error-message').slideDown().html('Rectify the errors, and try again!');
+		this_form.find('.loading').slideUp();
+		return false;
+	}
     if( ! action ) {
       this_form.find('.loading').slideUp();
       this_form.find('.error-message').slideDown().html('The form action property is not set!');
@@ -134,6 +143,8 @@
         this_form.find('.loading').slideUp();
         this_form.find('.sent-message').slideDown();
         this_form.find("input:not(input[type=submit]), textarea").val('');
+		$('.validate').hide();
+		getNewCaptcha();
       } else {
         this_form.find('.loading').slideUp();
         if(!msg) {

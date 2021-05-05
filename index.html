@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html xmlns="http://www.w3.org/1999/xhtml" >
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -29,6 +28,7 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:200,300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -37,7 +37,6 @@
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-
   <!-- Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">  
   <!-- =======================================================
@@ -337,7 +336,17 @@
 					<div class="form-group"><input type="text" name="phoneno" id="phoneno" placeholder="Phone Number" data-rule="regexp:^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$" data-msg="Please enter a valid phone number (10 digits)"><div class="validate"></div></div>
 					<div class="form-group"><input type="text" name="emailid" id="emailid" placeholder="Email" data-rule="email" data-msg="Please enter a valid email"><div class="validate"></div></div>
 					<!-- <input type="text" placeholder="Purpose of Collaboration"> -->
-					<div class="mb-3">
+					<div class="form-row no-gutters">
+						<div class="col-md-6 form-group">
+						   <canvas id="collaborate-captcha"></canvas>
+						   <button class="btn btn-light" id="toggle-collaborate-captcha" type="button" submit="false"><i class="icofont-refresh"></i></button>
+						</div>
+						<div class="col-md-6 form-group">
+						  <input type="text" name="collaborate-captcha-text" id="collaborate-captcha-text" placeholder="Verification Code" class="form-control" style="margin:0" required>
+						  <div id="validate-collaborate-captcha" class="validate"></div>
+						</div>
+					</div>
+					<div class="mb-2">
 						<div class="loading">Loading</div>
 						<div class="error-message">Your mail could not be sent at this time, please try again later!</div>
 						<div class="sent-message">Your message has been sent. Thank you!</div>
@@ -561,28 +570,28 @@
           </div>
 
           <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in" data-aos-delay="300">
-            <!-- <ul style="list-style: none; padding: 0;"> -->
-              <!-- <li><i class="icofont-question"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequa</li> -->
-              <!-- <li><i class="icofont-question"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li> -->
-              <!-- <li><i class="icofont-question"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</li> -->
-            <!-- </ul> -->
+            <ul style="list-style: none; padding: 0;">
+              <li><i class="icofont-question"></i> Is procrastination always BAD?</li>
+              <li><i class="icofont-question"></i> Does your child answer "LATER" to the most basic day-to-day questions (Homework/Dinner)?</li>
+              <li><i class="icofont-question"></i> Does your child run out of time to prepare for exams?</li>
+            </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in" data-aos-delay="400">
-            <!-- <ul style="list-style: none; padding: 0;"> -->
-              <!-- <li><i class="icofont-question"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequa</li> -->
-              <!-- <li><i class="icofont-question"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li> -->
-              <!-- <li><i class="icofont-question"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</li> -->
-            <!-- </ul> -->
+            <ul style="list-style: none; padding: 0;">
+              <li><i class="icofont-question"></i> Does your child spend a lot of time making the smallest decisions?</li>
+              <li><i class="icofont-question"></i> Does your child find themselves in a confused state often?</li>
+              <li><i class="icofont-question"></i> Does your child think more than taking actions?</li>
+            </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in" data-aos-delay="500">
             <!-- <span>06</span> -->
-            <!-- <ul style="list-style: none; padding: 0;"> -->
-              <!-- <li><i class="icofont-question"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequa</li> -->
-              <!-- <li><i class="icofont-question"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li> -->
-              <!-- <li><i class="icofont-question"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</li> -->
-            <!-- </ul> -->
+            <ul style="list-style: none; padding: 0;">
+              <li><i class="icofont-question"></i> Do you often find your child complain about not having enough resources?</li>
+              <li><i class="icofont-question"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
+              <li><i class="icofont-question"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</li>
+            </ul>
           </div>
 
         </div>
@@ -948,7 +957,7 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form id="php-email-form" action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="form-group">
                 <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
               <div class="validate"></div>
@@ -971,7 +980,17 @@
                 <textarea class="form-control" name="message" id="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
                 <div class="validate"></div>
               </div>
-              <div class="mb-3">
+			  <div class="form-row">
+                <div class="col-md-6 form-group">
+                   <canvas id="captcha"></canvas>
+		           <button class="btn btn-light" id="toggle" type="button" submit="false"><i class="icofont-refresh"></i></button>
+				</div>
+                <div class="col-md-6 form-group">
+                  <input type="text" name="captcha-text" id="captcha-text" placeholder="please enter verification code" class="form-control" required>
+                  <div id="validate-captcha" class="validate"></div>
+                </div>
+              </div>
+			  <div class="mb-3">
                 <div class="loading">Loading</div>
                 <div class="error-message">Your mail could not be sent at this time, please try again later!</div>
                 <div class="sent-message">Thank you for contacting us!</div>
@@ -998,9 +1017,9 @@
 		<div class="social-links">
           <a href="https://twitter.com/insukoon" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
           <a href="https://www.facebook.com/insukoon.company/" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
-          <a href="https://www.instagram.com/insukoon_/" class="instagram"><i class="bx bxl-instagram" target="_blank"></i></a>
-          <a href="https://www.linkedin.com/company/insukoon" class="linkedin"><i class="bx bxl-linkedin" target="_blank"></i></a>
-		  &nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;<a href="emp-dash.html" class="employee-login">Employee Login</a>
+          <a href="https://www.instagram.com/insukoon_/" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/insukoon" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+		  &nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;<a href="emp-login.html" class="employee-login">Employee Login</a>
         </div>
       </div>
       
@@ -1015,6 +1034,7 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
   <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="assets/vendor/captcha.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
   <script src="assets/vendor/counterup/counterup.min.js"></script>
@@ -1105,6 +1125,24 @@ function onLoginRegisterChange() {
     }
 }
 
+//Captcha Creation and Validation
+var rightCode = '';
+var verifyCode = '';
+var captchaText = document.querySelector('#captcha-text');
+var toggleBtn = document.querySelector('#toggle');
+var toggleCollabBtn = document.querySelector('#toggle-collaborate-captcha');
+var submitBtn = document.querySelector('#submit');
+toggleBtn.addEventListener('click', function(){
+  getNewCaptcha();
+  console.log('click:' + rightCode);
+}, false);
+
+toggleCollabBtn.addEventListener('click', function(){
+  getNewCollaborateCaptcha();
+  console.log('click:' + verifyCode);
+}, false);
+
+
 //Ripple effect animation for FAQ section 
 $(document).ready(function(){
 				$(".faq-col-1").ripple({
@@ -1183,7 +1221,6 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("orientationChange", lazyload);
   }
 })
-
 </script>
 
 </body>

@@ -1,5 +1,10 @@
-<?php
+<?php session_start(); 
 require 'mailer/PHPMailerAutoload.php'; 
+require("captcha/botdetect.php"); 
+$isHuman = $DynamicCaptcha->Validate();
+if(!$isHuman) {
+	echo "<script>alert('CAPTCHA Code not validated, Please try again later!');</script>"
+else{
 $mail = new PHPMailer();
 // configure an SMTP
 $mail->isSMTP();
@@ -76,5 +81,6 @@ if(!$mail1->send()){
    echo "<script>alert('EMAIL FAILED');</script>";    
 } else {
     echo " ";
+}
 }
 ?>
